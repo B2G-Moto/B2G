@@ -1,7 +1,13 @@
 #!/bin/bash
 
-. setup.sh &&
-time nice -n19 make $MAKE_FLAGS $@
+if [ -f .repo ]; then
+	echo "Updating repo."
+	repo sync -j4
+else
+	repo init -u https://github.com/B2G-Moto/b2g-manifest -b master
+fi
+
+. setup.sh && time nice -n19 make $MAKE_FLAGS $@
 
 ret=$?
 echo -ne \\a
