@@ -49,28 +49,8 @@ else
 fi
 
 case "$1" in
-"galaxy-s2")
-	echo DEVICE=galaxys2 > .config &&
-	repo_sync galaxy-s2 &&
-	(cd device/samsung/galaxys2 && ./extract-files.sh)
-	;;
-
-"galaxy-nexus")
-	echo DEVICE=maguro > .config &&
-	repo_sync maguro &&
-	(cd device/samsung/maguro && ./download-blobs.sh)
-	;;
-
-"nexus-s")
-	echo DEVICE=crespo > .config &&
-	repo_sync crespo &&
-	(cd device/samsung/crespo && ./download-blobs.sh)
-	;;
-
-"otoro")
-	echo DEVICE=otoro > .config &&
-	repo_sync otoro &&
-	(cd device/qcom/otoro && ./extract-files.sh)
+"tenderloin")
+	echo DEVICE=tenderloin > .config
 	;;
 
 "emulator")
