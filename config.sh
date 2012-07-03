@@ -69,10 +69,7 @@ case "$1" in
 	echo Usage: $0 \(device name\)
 	echo
 	echo Valid devices to configure are:
-	echo - galaxy-s2
-	echo - galaxy-nexus
-	echo - nexus-s
-	echo - otoro
+	echo - tenderloin
 	echo - emulator
 	echo - emulator-x86
 	exit -1
