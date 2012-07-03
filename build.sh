@@ -1,9 +1,7 @@
 #!/bin/bash
 
-if [ -f .repo ]; then
-	echo "Updating repo."
-	repo sync -j4
-else
+if [ !-f .repo ]; then
+	echo "Fetching repo projects...this will take a while."
 	repo init -u https://github.com/B2G-Moto/b2g-manifest -b master
 	repo sync -j4
 fi
