@@ -5,6 +5,7 @@ if [ -f .repo ]; then
 	repo sync -j4
 else
 	repo init -u https://github.com/B2G-Moto/b2g-manifest -b master
+	repo sync -j4
 fi
 
 . setup.sh && time nice -n19 make $MAKE_FLAGS $@
