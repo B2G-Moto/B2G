@@ -50,7 +50,8 @@ fi
 
 case "$1" in
 "droid2")
-	echo DEVICE=droid2 > .config
+	echo DEVICE=droid2 > .config &&
+	repo_sync master
 	;;
 
 "emulator")
