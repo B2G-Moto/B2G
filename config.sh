@@ -49,8 +49,8 @@ else
 fi
 
 case "$1" in
-"tenderloin")
-	echo DEVICE=tenderloin > .config
+"droid2")
+	echo DEVICE=droid2 > .config
 	;;
 
 "emulator")
@@ -69,7 +69,7 @@ case "$1" in
 	echo Usage: $0 \(device name\)
 	echo
 	echo Valid devices to configure are:
-	echo - tenderloin
+	echo - droid2
 	echo - emulator
 	echo - emulator-x86
 	exit -1
